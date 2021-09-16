@@ -15,5 +15,6 @@
 /* Enqueue scripts and stylesheets. */
 add_action( 'wp_enqueue_scripts', 'gf_asu_style_enqueue_scripts' );
 function gf_asu_style_enqueue_scripts() {
-	wp_enqueue_style( 'gf-asu-styles', plugin_dir_url( __FILE__ ) . '/css/gf-asu-styles.css', array(), null );
+	wp_enqueue_script( 'gf-asu-scripts', plugin_dir_url( __FILE__ ) . '/js/custom.js', array('jquery'), null );
+    wp_enqueue_style( 'gf-asu-styles', plugin_dir_url( __FILE__ ) . '/css/gf-asu-styles.css', array(), null );
 }

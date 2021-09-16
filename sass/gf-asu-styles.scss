@@ -1,0 +1,210 @@
+/*--------------------------------------------------------------
+# Form Styles for Gravity Forms
+Uses default styles from GF as starting point.
+Implements 
+--------------------------------------------------------------*/
+
+$uds-color-base-gray-1: #fafafa;
+$uds-color-base-gray-2: #e8e8e8;
+$uds-color-base-gray-3: #d0d0d0;
+$uds-color-base-gray-4: #bfbfbf;
+$uds-color-base-gray-5: #747474;
+$uds-color-base-gray-6: #484848;
+$uds-color-base-gray-7: #191919;
+$uds-color-base-gold: #ffc627;
+$uds-color-base-maroon: #8c1d40;
+$uds-color-base-white: #ffffff;
+$uds-color-danger: #cc2f2f;
+
+/*--------------------------------------------------------------
+# Spacing, Padding, General typography
+--------------------------------------------------------------*/
+.gform_body .gform_fields .gfield {
+    margin-bottom:1rem;
+}
+
+.gform_body .gform_fields .gfield .gfield_description {
+    font-size:14px;
+}
+
+
+/*--------------------------------------------------------------
+# Text Box Input Fields. (Covers a lot.)
+--------------------------------------------------------------*/
+
+.gform_body .gform_fields .gfield input[type=color], 
+.gform_body .gform_fields .gfield input[type=date], 
+.gform_body .gform_fields .gfield input[type=datetime-local], 
+.gform_body .gform_fields .gfield input[type=datetime], 
+.gform_body .gform_fields .gfield input[type=email], 
+.gform_body .gform_fields .gfield input[type=month], 
+.gform_body .gform_fields .gfield input[type=number], 
+.gform_body .gform_fields .gfield input[type=password], 
+.gform_body .gform_fields .gfield input[type=search], 
+.gform_body .gform_fields .gfield input[type=tel], 
+.gform_body .gform_fields .gfield input[type=text], 
+.gform_body .gform_fields .gfield input[type=time], 
+.gform_body .gform_fields .gfield input[type=url], 
+.gform_body .gform_fields .gfield input[type=week], 
+.gform_body .gform_fields .gfield select, 
+.gform_body .gform_fields .gfield textarea {
+    border: 1px solid $uds-color-base-gray-5;
+    border-radius: none;
+}
+
+.gform_body .gform_fields .gfield input[type=color]:focus, 
+.gform_body .gform_fields .gfield input[type=date]:focus, 
+.gform_body .gform_fields .gfield input[type=datetime-local]:focus, 
+.gform_body .gform_fields .gfield input[type=datetime]:focus, 
+.gform_body .gform_fields .gfield input[type=email]:focus, 
+.gform_body .gform_fields .gfield input[type=month]:focus, 
+.gform_body .gform_fields .gfield input[type=number]:focus, 
+.gform_body .gform_fields .gfield input[type=password]:focus, 
+.gform_body .gform_fields .gfield input[type=search]:focus, 
+.gform_body .gform_fields .gfield input[type=tel]:focus, 
+.gform_body .gform_fields .gfield input[type=text]:focus, 
+.gform_body .gform_fields .gfield input[type=time]:focus, 
+.gform_body .gform_fields .gfield input[type=url]:focus, 
+.gform_body .gform_fields .gfield input[type=week]:focus, 
+.gform_body .gform_fields .gfield select:focus, 
+.gform_body .gform_fields .gfield textarea:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: 2px solid $uds-color-base-gray-7 !important;
+    border-radius: none;
+}
+
+/*--------------------------------------------------------------
+# Required indicator
+--------------------------------------------------------------*/
+// Disables GF setting for type of bullet in favor of a hard coded &bull;
+.gform_body .gfield_label .gfield_required .gfield_required {
+    display:none;
+}
+
+.gform_body .gfield_contains_required .gfield_label {
+    position:relative;
+}
+
+.gform_body .gfield_label .gfield_required:before {
+    content: '\2022'; // Unicode bullet.
+    color: $uds-color-danger;
+    display:block;
+    font-size: 24px;
+}
+
+
+/*--------------------------------------------------------------
+# Validation Errors
+--------------------------------------------------------------*/
+
+body .gform_wrapper .gform_validation_errors {
+    border-radius: 0;
+    box-shadow:none;
+}
+
+// The error message at the top of the form renders as an H2 and has odd letter spacing.
+body .gform_wrapper h2.gform_submission_error {
+    letter-spacing:normal;
+    font-size: 16px;
+}
+
+body .gform_wrapper .gfield_validation_message,
+body .gform_wrapper .validation_message {
+    border:0;
+    padding:0;
+    background-color:transparent;
+    font-weight:700;
+    margin-top:4px;
+}
+
+.gform_body .gform_fields .gfield_error input[type=color], 
+.gform_body .gform_fields .gfield_error input[type=date], 
+.gform_body .gform_fields .gfield_error input[type=datetime-local], 
+.gform_body .gform_fields .gfield_error input[type=datetime], 
+.gform_body .gform_fields .gfield_error input[type=email], 
+.gform_body .gform_fields .gfield_error input[type=month], 
+.gform_body .gform_fields .gfield_error input[type=number], 
+.gform_body .gform_fields .gfield_error input[type=password], 
+.gform_body .gform_fields .gfield_error input[type=search], 
+.gform_body .gform_fields .gfield_error input[type=tel], 
+.gform_body .gform_fields .gfield_error input[type=text], 
+.gform_body .gform_fields .gfield_error input[type=time], 
+.gform_body .gform_fields .gfield_error input[type=url], 
+.gform_body .gform_fields .gfield_error input[type=week] {
+    border-bottom:4px solid $uds-color-danger;
+}
+    
+
+/*--------------------------------------------------------------
+# Radio Buttons
+--------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------
+# Buttons: Next, Previous, Submit, Submit-Single Page
+--------------------------------------------------------------*/
+
+body .gform_wrapper .gform_body .gform_page_footer .gform_next_button,
+body .gform_wrapper .gform_body .gform_page_footer .gform_previous_button,
+body .gform_wrapper .gform_body .gform_page_footer .gform_button,
+body .gform_wrapper .gform_footer input[type=submit] {
+    font-weight: 700;
+    color: $uds-color-base-white;
+    background-color: $uds-color-base-maroon;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    border-radius: 400rem;
+    padding:.5rem 1rem;
+    font-size:1rem;
+    line-height: 1;
+}
+
+/*--------------------------------------------------------------
+# File Upload
+--------------------------------------------------------------*/
+
+.gform_body .gform_fields .gfield .ginput_container input[type="file"] {
+    border-width:0;
+}
+
+.gform_body .gform_fields .gfield .ginput_container input[type="file"]::file-selector-button {
+    color: $uds-color-base-white;
+    font-weight:700;
+    border: 1px solid #8c1d40;
+    padding: 0.5rem 1rem;
+    border-radius: 400rem;
+    background-color: #8c1d40;
+}
+
+/*--------------------------------------------------------------
+# Multipage Form - Step Indicators
+--------------------------------------------------------------*/
+
+body .gform_wrapper .gf_page_steps .gf_step_active .gf_step_number {
+    background-color:#ffc627;
+    color:$uds-color-base-gray-7;
+    border-color: #ffc627;
+}
+
+body .gform_wrapper .gf_page_steps .gf_step_completed .gf_step_number:before {
+    background-color: $uds-color-base-gray-7;
+    color: $uds-color-base-white;
+    border-color: $uds-color-base-gray-7;
+}
+
+/*--------------------------------------------------------------
+# Repeater Information (BETA)
+
+Styles the output from https://github.com/wolffe/repeater2-for-gravity-forms
+and the beta version of the repeater field.
+--------------------------------------------------------------*/
+
+.gform_fields .gf_repeater2_add,
+.gform_fields .gf_repeater2_remove {
+    background-color:transparent;
+    padding:0 1rem 0 0;
+}
