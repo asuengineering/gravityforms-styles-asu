@@ -40,7 +40,7 @@ const jsVendorSRC = './js/vendor/*.js';
 const jsVendorDestination = './js/';
 
 // Compiled JS vendors file name. Default set to vendors i.e. vendors.js.
-const jsVendorFile = 'vendor';
+const jsVendorFile = 'vendors';
 
 // JS Custom options.
 
